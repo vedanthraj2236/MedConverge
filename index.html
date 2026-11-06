@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,11 +11,14 @@
        Palette: White Base (#FFFFFF), Beige (#F5F0E6), Sky Blue (#0284C7),
                 Teal (#0D9488), Navy (#0F2942), Standard Clinical Alerts
        ========================================================================= */
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+
     html {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
       line-height: 1.5;
@@ -22,6 +26,7 @@
       background-color: #F5F0E6;
       -webkit-font-smoothing: antialiased;
     }
+
     body {
       min-height: 100vh;
       display: flex;
@@ -30,14 +35,21 @@
       color: #0F2942;
       overflow-x: hidden;
     }
-    code, pre, .mono {
+
+    code,
+    pre,
+    .mono {
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     }
-    button, select, input {
+
+    button,
+    select,
+    input {
       font-family: inherit;
       font-size: inherit;
       color: inherit;
     }
+
     button {
       cursor: pointer;
       border: none;
@@ -54,11 +66,13 @@
       border-bottom: 3px solid #0D9488;
       box-shadow: 0 4px 16px rgba(15, 41, 66, 0.14);
     }
+
     .header-inner {
       max-width: 1440px;
       margin: 0 auto;
       padding: 14px 24px 0 24px;
     }
+
     .header-top-row {
       display: flex;
       flex-wrap: wrap;
@@ -68,12 +82,14 @@
       padding-bottom: 14px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     }
+
     .brand-group {
       display: flex;
       align-items: center;
       gap: 12px;
       cursor: pointer;
     }
+
     .brand-icon {
       width: 42px;
       height: 42px;
@@ -85,6 +101,7 @@
       color: #FFFFFF;
       box-shadow: 0 2px 8px rgba(13, 148, 136, 0.35);
     }
+
     .brand-title {
       font-size: 19px;
       font-weight: 800;
@@ -94,6 +111,7 @@
       align-items: center;
       gap: 8px;
     }
+
     .brand-badge {
       font-size: 11px;
       font-weight: 700;
@@ -103,6 +121,7 @@
       color: #FFFFFF;
       text-transform: uppercase;
     }
+
     .brand-subtitle {
       font-size: 12px;
       color: #EBE2D0;
@@ -116,6 +135,7 @@
       align-items: center;
       gap: 10px;
     }
+
     .kpi-pill {
       background-color: #163A5F;
       border: 1px solid #24507D;
@@ -123,6 +143,7 @@
       padding: 6px 14px;
       min-width: 138px;
     }
+
     .kpi-label {
       font-size: 10px;
       font-weight: 700;
@@ -130,15 +151,25 @@
       letter-spacing: 0.04em;
       color: #EBE2D0;
     }
+
     .kpi-value {
       font-size: 15px;
       font-weight: 800;
       color: #FFFFFF;
       margin-top: 1px;
     }
-    .kpi-value.teal { color: #5EEAD4; }
-    .kpi-value.sky { color: #7DD3FC; }
-    .kpi-value.amber { color: #FCD34D; }
+
+    .kpi-value.teal {
+      color: #5EEAD4;
+    }
+
+    .kpi-value.sky {
+      color: #7DD3FC;
+    }
+
+    .kpi-value.amber {
+      color: #FCD34D;
+    }
 
     /* Top Action Buttons */
     .action-strip {
@@ -147,6 +178,7 @@
       align-items: center;
       gap: 8px;
     }
+
     .btn-action {
       display: inline-flex;
       align-items: center;
@@ -157,22 +189,34 @@
       font-weight: 700;
       transition: all 0.15s ease;
     }
+
     .btn-sky {
       background-color: #0284C7;
       color: #FFFFFF;
     }
-    .btn-sky:hover { background-color: #0369A1; }
+
+    .btn-sky:hover {
+      background-color: #0369A1;
+    }
+
     .btn-danger {
       background-color: #DC2626;
       color: #FFFFFF;
     }
-    .btn-danger:hover { background-color: #B91C1C; }
+
+    .btn-danger:hover {
+      background-color: #B91C1C;
+    }
+
     .btn-navy-outline {
       background-color: #163A5F;
       color: #F5F0E6;
       border: 1px solid #2A5B8C;
     }
-    .btn-navy-outline:hover { background-color: #1B436B; }
+
+    .btn-navy-outline:hover {
+      background-color: #1B436B;
+    }
 
     /* Top Tabs Bar (Upside Navigation) */
     .top-tabs-row {
@@ -183,11 +227,13 @@
       gap: 12px;
       padding-top: 10px;
     }
+
     .tabs-nav {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
     }
+
     .tab-item {
       display: inline-flex;
       align-items: center;
@@ -202,19 +248,23 @@
       border-bottom: none;
       transition: all 0.15s ease;
     }
+
     .tab-item:hover {
       background-color: #163A5F;
       color: #FFFFFF;
     }
+
     .tab-item.active {
       background-color: #FFFFFF;
       color: #0F2942;
       border-color: #DDD0B8;
       box-shadow: 0 -2px 8px rgba(15, 41, 66, 0.08);
     }
+
     .tab-item.active svg {
       color: #0D9488;
     }
+
     .api-status-pill {
       font-size: 11px;
       color: #CCFBF1;
@@ -223,6 +273,7 @@
       align-items: center;
       gap: 6px;
     }
+
     .status-dot {
       width: 8px;
       height: 8px;
@@ -239,18 +290,28 @@
       padding: 24px;
       flex: 1;
     }
+
     .section-view {
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      gap: 22px;
       animation: fadeIn 0.2s ease-out;
     }
+
     .hidden {
       display: none !important;
     }
+
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(4px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(4px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* Standard Disciplined Cards */
@@ -261,22 +322,25 @@
       padding: 20px;
       box-shadow: 0 2px 8px rgba(15, 41, 66, 0.04);
     }
+
     .card-beige {
       background-color: #FAF7F2;
       border: 1px solid #DDD0B8;
       border-radius: 12px;
       padding: 20px;
     }
+
     .card-header {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      gap: 10px;
-      padding-bottom: 12px;
+      gap: 12px;
+      padding-bottom: 14px;
       margin-bottom: 16px;
       border-bottom: 1px solid #EBE2D0;
     }
+
     .card-title {
       font-size: 15px;
       font-weight: 800;
@@ -285,45 +349,69 @@
       align-items: center;
       gap: 8px;
     }
+
     .card-subtitle {
       font-size: 12px;
       color: #475569;
       margin-top: 2px;
     }
 
-    /* Grid Layouts for Extended Clean Page */
+    /* Grid Layouts */
     .grid-top-command {
       display: grid;
       grid-template-columns: 1fr;
       gap: 24px;
     }
+
     .grid-bottom-command {
       display: grid;
       grid-template-columns: 1fr;
       gap: 24px;
     }
+
     .grid-2-col {
       display: grid;
       grid-template-columns: 1fr;
       gap: 24px;
     }
+
     .grid-3-col {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 20px;
+      gap: 18px;
     }
+
+    .grid-4-col {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    @media (min-width: 768px) {
+      .grid-4-col {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
     @media (min-width: 1024px) {
       .grid-top-command {
         grid-template-columns: 7fr 5fr;
       }
+
       .grid-bottom-command {
         grid-template-columns: 5fr 7fr;
       }
+
       .grid-2-col {
         grid-template-columns: 1fr 1fr;
       }
+
       .grid-3-col {
         grid-template-columns: repeat(3, 1fr);
+      }
+
+      .grid-4-col {
+        grid-template-columns: repeat(4, 1fr);
       }
     }
 
@@ -337,6 +425,7 @@
       border-radius: 10px;
       overflow: hidden;
     }
+
     .map-overlay-bar {
       position: absolute;
       bottom: 12px;
@@ -353,22 +442,26 @@
       gap: 10px;
       box-shadow: 0 4px 12px rgba(15, 41, 66, 0.08);
     }
+
     .timer-badge {
       padding: 4px 10px;
       border-radius: 6px;
       font-size: 12px;
       font-weight: 700;
     }
+
     .timer-red {
       background-color: #FEF2F2;
       border: 1px solid #FECACA;
       color: #B91C1C;
     }
+
     .timer-sky {
       background-color: #F0F9FF;
       border: 1px solid #BAE6FD;
       color: #0369A1;
     }
+
     .scrubber-bar {
       margin-top: 14px;
       padding: 10px 14px;
@@ -380,6 +473,7 @@
       gap: 12px;
       font-size: 12px;
     }
+
     .scrubber-input {
       flex: 1;
       accent-color: #0D9488;
@@ -392,6 +486,7 @@
       flex-direction: column;
       gap: 10px;
     }
+
     .case-btn {
       width: 100%;
       text-align: left;
@@ -401,15 +496,18 @@
       background-color: #FAF7F2;
       transition: all 0.15s ease;
     }
+
     .case-btn:hover {
       border-color: #0D9488;
       background-color: #FFFFFF;
     }
+
     .case-btn.selected {
       background-color: #F0F9FF;
       border-color: #0F2942;
       box-shadow: 0 2px 6px rgba(15, 41, 66, 0.08);
     }
+
     .case-btn-top {
       display: flex;
       align-items: center;
@@ -417,11 +515,13 @@
       gap: 8px;
       margin-bottom: 4px;
     }
+
     .case-title {
       font-size: 13px;
       font-weight: 800;
       color: #0F2942;
     }
+
     .case-desc {
       font-size: 11.5px;
       color: #334155;
@@ -436,12 +536,37 @@
       font-size: 10px;
       font-weight: 700;
       text-transform: uppercase;
+      white-space: nowrap;
     }
-    .badge-teal { background-color: #CCFBF1; color: #0F766E; border: 1px solid #99F6E4; }
-    .badge-sky { background-color: #E0F2FE; color: #0369A1; border: 1px solid #BAE6FD; }
-    .badge-navy { background-color: #0F2942; color: #FFFFFF; }
-    .badge-amber { background-color: #FEF3C7; color: #92400E; border: 1px solid #FDE68A; }
-    .badge-red { background-color: #FEE2E2; color: #B91C1C; border: 1px solid #FECACA; }
+
+    .badge-teal {
+      background-color: #CCFBF1;
+      color: #0F766E;
+      border: 1px solid #99F6E4;
+    }
+
+    .badge-sky {
+      background-color: #E0F2FE;
+      color: #0369A1;
+      border: 1px solid #BAE6FD;
+    }
+
+    .badge-navy {
+      background-color: #0F2942;
+      color: #FFFFFF;
+    }
+
+    .badge-amber {
+      background-color: #FEF3C7;
+      color: #92400E;
+      border: 1px solid #FDE68A;
+    }
+
+    .badge-red {
+      background-color: #FEE2E2;
+      color: #B91C1C;
+      border: 1px solid #FECACA;
+    }
 
     /* Form Controls */
     .form-grid {
@@ -450,6 +575,7 @@
       gap: 12px;
       margin-bottom: 12px;
     }
+
     .form-group label {
       display: block;
       font-size: 11.5px;
@@ -457,6 +583,7 @@
       color: #0F2942;
       margin-bottom: 5px;
     }
+
     .form-select {
       width: 100%;
       padding: 8px 10px;
@@ -467,6 +594,7 @@
       font-weight: 600;
       color: #0F2942;
     }
+
     .btn-primary-full {
       width: 100%;
       padding: 10px 16px;
@@ -481,6 +609,7 @@
       gap: 8px;
       transition: background 0.15s ease;
     }
+
     .btn-primary-full:hover {
       background-color: #0F766E;
     }
@@ -492,29 +621,68 @@
       gap: 12px;
       margin-top: 12px;
     }
+
     .math-cell {
       padding: 12px;
       border-radius: 8px;
       background-color: #FFFFFF;
       border: 1.5px solid #DDD0B8;
     }
+
     .math-cell.winner {
       border-color: #0D9488;
       background-color: #F0FDFA;
     }
+
     .math-cell.verdict-navy {
       background-color: #0F2942;
       border-color: #0F2942;
       color: #FFFFFF;
     }
 
-    /* Standard Data Tables */
+    /* =========================================================================
+       RESTYLED TAB 2: EXECUTIVE INVENTORY TABLE & HOSPITAL CARDS
+       ========================================================================= */
+    .fleet-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+
+    .fleet-card {
+      background-color: #FFFFFF;
+      border: 1px solid #DDD0B8;
+      border-top: 3px solid #0F2942;
+      border-radius: 10px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      box-shadow: 0 2px 6px rgba(15, 41, 66, 0.03);
+    }
+
+    .fleet-card.teal-top {
+      border-top-color: #0D9488;
+    }
+
+    .fleet-card.sky-top {
+      border-top-color: #0284C7;
+    }
+
+    .fleet-card.red-top {
+      border-top-color: #DC2626;
+    }
+
     .table-wrap {
       width: 100%;
       overflow-x: auto;
       border: 1px solid #DDD0B8;
-      border-radius: 10px;
+      border-radius: 12px;
+      background-color: #FFFFFF;
+      box-shadow: 0 2px 10px rgba(15, 41, 66, 0.04);
     }
+
     .data-table {
       width: 100%;
       border-collapse: collapse;
@@ -522,52 +690,177 @@
       font-size: 12.5px;
       background-color: #FFFFFF;
     }
+
     .data-table th {
       background-color: #0F2942;
       color: #FFFFFF;
       font-size: 11px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.03em;
-      padding: 12px 14px;
-      border-bottom: 2px solid #0D9488;
+      letter-spacing: 0.04em;
+      padding: 14px 16px;
+      border-bottom: 3px solid #0D9488;
+      white-space: nowrap;
     }
+
     .data-table td {
-      padding: 12px 14px;
+      padding: 14px 16px;
       border-bottom: 1px solid #EBE2D0;
       vertical-align: middle;
     }
-    .data-table tr:hover td {
-      background-color: #FAF7F2;
+
+    .data-table tbody tr:nth-child(even) td {
+      background-color: #FCFBF9;
     }
+
+    .data-table tbody tr:hover td {
+      background-color: #F0F9FF;
+    }
+
+    /* Clean Non-Wrapping Equipment Metric Widget inside Table Cells */
+    .metric-widget {
+      background-color: #FAF7F2;
+      border: 1px solid #DDD0B8;
+      border-radius: 10px;
+      padding: 8px 10px;
+      min-width: 158px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .metric-widget.has-surplus {
+      background-color: #F0F9FF;
+      border-color: #BAE6FD;
+    }
+
+    .metric-widget.is-deficit {
+      background-color: #FEF2F2;
+      border-color: #FECACA;
+    }
+
+    .metric-top-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    .lend-status-pill {
+      font-size: 11px;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 6px;
+      display: inline-block;
+    }
+
+    .lend-status-pill.ok {
+      background-color: #0284C7;
+      color: #FFFFFF;
+    }
+
+    .lend-status-pill.teal {
+      background-color: #0D9488;
+      color: #FFFFFF;
+    }
+
+    .lend-status-pill.zero {
+      background-color: #DC2626;
+      color: #FFFFFF;
+    }
+
+    .stepper-group {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .btn-icon-sq {
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      border: 1px solid #C5B69B;
+      background-color: #FFFFFF;
+      color: #0F2942;
+      font-weight: 800;
+      font-size: 13px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.12s ease;
+    }
+
+    .btn-icon-sq:hover {
+      background-color: #0F2942;
+      color: #FFFFFF;
+      border-color: #0F2942;
+    }
+
+    .metric-sub-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 10.5px;
+      color: #475569;
+      white-space: nowrap;
+      border-top: 1px dashed rgba(15, 41, 66, 0.12);
+      padding-top: 4px;
+    }
+
     .step-btn {
-      padding: 3px 8px;
-      border-radius: 5px;
+      padding: 6px 12px;
+      border-radius: 7px;
       border: 1px solid #C5B69B;
       background-color: #F5F0E6;
-      font-size: 11px;
+      font-size: 11.5px;
       font-weight: 700;
       color: #0F2942;
+      white-space: nowrap;
+      transition: all 0.15s ease;
     }
+
     .step-btn:hover {
       background-color: #EBE2D0;
+    }
+
+    .step-btn.active-filter {
+      background-color: #0F2942;
+      color: #FFFFFF;
+      border-color: #0F2942;
     }
 
     /* SVG Animations */
     .pulse-ring {
       animation: pulseRing 2s infinite;
     }
+
     @keyframes pulseRing {
-      0% { transform: scale(0.92); opacity: 0.85; }
-      70% { transform: scale(1.65); opacity: 0; }
-      100% { transform: scale(1.65); opacity: 0; }
+      0% {
+        transform: scale(0.92);
+        opacity: 0.85;
+      }
+
+      70% {
+        transform: scale(1.65);
+        opacity: 0;
+      }
+
+      100% {
+        transform: scale(1.65);
+        opacity: 0;
+      }
     }
+
     .dash-flow {
       stroke-dasharray: 8 6;
       animation: dashMove 1s linear infinite;
     }
+
     @keyframes dashMove {
-      to { stroke-dashoffset: -28; }
+      to {
+        stroke-dashoffset: -28;
+      }
     }
 
     /* Modal & Toast */
@@ -582,6 +875,7 @@
       justify-content: center;
       padding: 16px;
     }
+
     .modal-card {
       background-color: #FFFFFF;
       border: 2px solid #DDD0B8;
@@ -591,6 +885,7 @@
       padding: 22px;
       box-shadow: 0 20px 50px rgba(15, 41, 66, 0.25);
     }
+
     .toast-stack {
       position: fixed;
       bottom: 20px;
@@ -604,7 +899,7 @@
     }
   </style>
   <script>
-    // Built-in Offline SVG Icon Renderer (Zero External CDN Required)
+    // Built-in Offline SVG Icon Renderer
     window.OFFLINE_SVG_PATHS = {
       'activity': '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>',
       'clock': '<circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>',
@@ -629,8 +924,8 @@
       'zap': '<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>'
     };
     window.lucide = {
-      createIcons: function() {
-        document.querySelectorAll('[data-lucide]').forEach(function(el) {
+      createIcons: function () {
+        document.querySelectorAll('[data-lucide]').forEach(function (el) {
           const name = el.getAttribute('data-lucide');
           const inner = window.OFFLINE_SVG_PATHS[name] || window.OFFLINE_SVG_PATHS['activity'];
           const idAttr = el.getAttribute('id') ? ' id="' + el.getAttribute('id') + '"' : '';
@@ -640,6 +935,7 @@
     };
   </script>
 </head>
+
 <body>
 
   <!-- ===================================================================== -->
@@ -648,7 +944,6 @@
   <header class="top-header">
     <div class="header-inner">
       <div class="header-top-row">
-        <!-- Brand Identity -->
         <div class="brand-group" onclick="switchTab('command')">
           <div class="brand-icon">
             <i data-lucide="activity"></i>
@@ -659,12 +954,11 @@
               <span class="brand-badge">Bengaluru Grid</span>
             </div>
             <div class="brand-subtitle">
-              Real-Time Critical Care Bed &amp; Inter-Hospital Equipment Convergence Network
+              Real-Time Critical Care Bed &amp; Ambulance/Courier Equipment Convergence Network
             </div>
           </div>
         </div>
 
-        <!-- 4 Real-Time KPI Pills -->
         <div class="kpi-strip">
           <div class="kpi-pill">
             <div class="kpi-label">True-Ready ICU Beds</div>
@@ -675,7 +969,7 @@
             <div class="kpi-value sky mono" id="kpi-lend-pool">75 Assets</div>
           </div>
           <div class="kpi-pill">
-            <div class="kpi-label">Active Equipment Couriers</div>
+            <div class="kpi-label">Active Equipment Transfers</div>
             <div class="kpi-value teal mono" id="kpi-active-transfers">2 In-Flight</div>
           </div>
           <div class="kpi-pill">
@@ -684,17 +978,22 @@
           </div>
         </div>
 
-        <!-- Quick Demo Action Buttons -->
         <div class="action-strip">
           <button id="btn-voice-dispatch" onclick="triggerVoiceRadioDemo()" class="btn-action btn-sky">
             <i data-lucide="mic"></i>
             <span>Paramedic Voice Call</span>
           </button>
+          <button id="btn-zero-nearby" onclick="triggerZeroNearbyScenario()" class="btn-action"
+            style="background-color:#D97706; color:#FFFFFF;">
+            <i data-lucide="siren"></i>
+            <span>10m Emergency: No Nearby Equip</span>
+          </button>
           <button id="btn-mci-surge" onclick="triggerMassCasualtySurge()" class="btn-action btn-danger">
             <i data-lucide="flame"></i>
             <span>Code Orange: MCI Surge</span>
           </button>
-          <button id="btn-sound-toggle" onclick="toggleSound()" class="btn-action btn-navy-outline" title="Toggle Audio">
+          <button id="btn-sound-toggle" onclick="toggleSound()" class="btn-action btn-navy-outline"
+            title="Toggle Audio">
             <i data-lucide="volume-2" id="icon-sound"></i>
           </button>
           <button id="btn-reset-sim" onclick="resetSimulation()" class="btn-action btn-navy-outline">
@@ -733,7 +1032,6 @@
     </div>
   </header>
 
-  <!-- Toast Notification Stack -->
   <div id="toast-container" class="toast-stack"></div>
 
   <!-- ===================================================================== -->
@@ -746,7 +1044,6 @@
     <!-- =================================================================== -->
     <section id="view-command" class="section-view">
 
-      <!-- Row 1: Large Tactical Convergence Map (Left 7fr) + Emergency Dispatch Panel (Right 5fr) -->
       <div class="grid-top-command">
 
         <!-- Left Card: Live Bengaluru GPS Convergence Radar -->
@@ -754,11 +1051,12 @@
           <div class="card-header">
             <div>
               <div class="card-title">
-                <span>Bengaluru Hospital &amp; Equipment Convergence Radar</span>
+                <span>Bengaluru Hospital &amp; Ambulance Equipment Convergence Radar</span>
                 <span id="map-mode-badge" class="badge badge-teal mono">CONVERGENCE LOCKED • SAVES 18 MINS</span>
               </div>
               <div class="card-subtitle">
-                Click any hospital node (<strong>H1–H6</strong>) to inspect its live capacity. Red dashed vector = <strong>108 Ambulance</strong> | Blue/Teal vector = <strong>Equipment Courier/Drone</strong>.
+                Click any hospital node (<strong>H1–H6</strong>) to inspect capacity. Red vector = <strong>Patient 108
+                  Ambulance</strong> | Blue/Teal vector = <strong>Equipment Transfer Ambulance / Bike / Drone</strong>.
               </div>
             </div>
             <button id="btn-toggle-transit" onclick="toggleTransitPlay()" class="step-btn mono">
@@ -770,7 +1068,7 @@
             <svg id="tactical-map-svg" viewBox="0 0 800 500" style="width:100%; height:100%; user-select:none;">
               <defs>
                 <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
-                  <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#E6DEC8" stroke-width="1"/>
+                  <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#E6DEC8" stroke-width="1" />
                 </pattern>
                 <radialGradient id="target-glow" cx="50%" cy="50%" r="50%">
                   <stop offset="0%" stop-color="rgba(13, 148, 136, 0.28)" />
@@ -783,11 +1081,13 @@
               </defs>
 
               <rect width="800" height="500" fill="url(#grid-pattern)" />
-              <path d="M 50 180 Q 260 220 460 150 T 760 190" fill="none" stroke="#BAE6FD" stroke-width="10" opacity="0.65" />
+              <path d="M 50 180 Q 260 220 460 150 T 760 190" fill="none" stroke="#BAE6FD" stroke-width="10"
+                opacity="0.65" />
               <path d="M 60 250 Q 400 220 740 260" fill="none" stroke="#CBD5E1" stroke-width="6" />
               <path d="M 380 30 Q 370 250 450 470" fill="none" stroke="#CBD5E1" stroke-width="6" />
               <path d="M 140 90 Q 400 260 670 420" fill="none" stroke="#CBD5E1" stroke-width="4" />
-              <text x="18" y="485" fill="#163A5F" font-size="10" font-weight="700" font-family="monospace">BENGALURU MEDICAL GRID • ABDM HFR + ICMR i-DRONE GREEN CORRIDORS</text>
+              <text x="18" y="485" fill="#163A5F" font-size="10" font-weight="700" font-family="monospace">BENGALURU
+                MEDICAL GRID • 108 GREEN-CORRIDOR AMBULANCES + BIKES + DRONES</text>
 
               <g id="map-routes-layer"></g>
               <g id="map-hospitals-layer"></g>
@@ -799,22 +1099,28 @@
                 <span class="timer-badge timer-sky mono" id="overlay-equip-timer">MAX EQUIP + SETUP: 07:00</span>
               </div>
               <div id="overlay-convergence-verdict" style="font-size:12px; font-weight:800; color:#0F766E;">
-                ✓ Equipment Ready 2 min(s) BEFORE Ambulance Arrives
+                ✓ Equipment Ready 2 min(s) BEFORE Patient Ambulance Arrives
               </div>
             </div>
           </div>
 
           <div class="scrubber-bar">
             <span class="mono" style="font-weight:700; color:#0F2942;">Live Transit Progress:</span>
-            <input id="transit-scrubber" type="range" min="0" max="100" value="35" oninput="scrubTransitProgress(this.value)" class="scrubber-input" />
-            <span id="transit-progress-label" class="mono" style="font-weight:800; color:#0D9488; min-width:42px; text-align:right;">35%</span>
+            <input id="transit-scrubber" type="range" min="0" max="100" value="35"
+              oninput="scrubTransitProgress(this.value)" class="scrubber-input" />
+            <span id="transit-progress-label" class="mono"
+              style="font-weight:800; color:#0D9488; min-width:42px; text-align:right;">35%</span>
           </div>
 
-          <!-- Upgrade #2 Convergence Formula Box Directly Below Map -->
-          <div id="math-decision-box" style="margin-top:16px; padding:16px; border-radius:10px; background:#FAF7F2; border:1px solid #DDD0B8;"></div>
+          <div id="math-decision-box"
+            style="margin-top:16px; padding:16px; border-radius:10px; background:#FAF7F2; border:1px solid #DDD0B8;">
+          </div>
+          <div id="zero-nearby-protocol-box" class="hidden"
+            style="margin-top:16px; padding:18px; border-radius:12px; background:#FFFBEB; border:2px solid #D97706;">
+          </div>
         </div>
 
-        <!-- Right Card: 4 Emergency Preset Cases + Custom Ambulance Broadcast Form -->
+        <!-- Right Card: 4 Emergency Preset Cases + Custom Broadcast Form -->
         <div style="display:flex; flex-direction:column; gap:20px;">
           <div class="card-white">
             <div class="card-header">
@@ -823,9 +1129,10 @@
                   <i data-lucide="siren"></i>
                   <span>108 Ambulance Emergency Cases</span>
                 </div>
-                <div class="card-subtitle">Select a preset emergency scenario to run the Dual-Vector Convergence Engine</div>
+                <div class="card-subtitle">Select an emergency scenario to dispatch equipment via 108 Ambulance, Bike,
+                  or Drone</div>
               </div>
-              <span class="badge badge-teal mono">4 Presets</span>
+              <span class="badge badge-teal mono">5 Scenarios</span>
             </div>
             <div id="scenario-buttons-list" class="case-list"></div>
           </div>
@@ -837,7 +1144,8 @@
                   <i data-lucide="sliders"></i>
                   <span>Custom Ambulance Broadcast</span>
                 </div>
-                <div class="card-subtitle">Test any receiving hospital, missing resource tier, and ambulance ETA</div>
+                <div class="card-subtitle">Choose receiving hospital, missing equipment, and preferred transport vehicle
+                </div>
               </div>
             </div>
 
@@ -855,22 +1163,24 @@
               <div class="form-group">
                 <label for="custom-resource-need">Missing Equipment / Resource</label>
                 <select id="custom-resource-need" class="form-select">
-                  <option value="portable_vent">Tier 1: Portable Ventilator</option>
-                  <option value="oneg_blood">Tier 1: O-Negative Blood (2u)</option>
-                  <option value="ped_defib">Tier 1: Pediatric Defib &amp; Pump</option>
-                  <option value="antivenom">Tier 1: Snake Antivenom Kit</option>
-                  <option value="icu_vent">Tier 2: Full ICU Ventilator</option>
+                  <option value="portable_vent">Tier 1: Portable Ventilator (108 Ambulance)</option>
+                  <option value="oneg_blood">Tier 1: O-Negative Blood (Amb / Drone)</option>
+                  <option value="ped_defib">Tier 1: Pediatric Defib &amp; Pump (108 Amb)</option>
+                  <option value="antivenom">Tier 1: Snake Antivenom (Bike / Amb)</option>
+                  <option value="icu_vent">Tier 2: Full ICU Ventilator (ALS Ambulance)</option>
                   <option value="cath_ecmo">Tier 3: Fixed Cath Lab + ECMO</option>
                 </select>
               </div>
             </div>
 
             <div class="form-group" style="margin-bottom:14px;">
-              <div style="display:flex; justify-content:space-between; font-size:12px; font-weight:700; margin-bottom:4px;">
-                <label for="custom-amb-eta">Ambulance ETA to Hospital A</label>
+              <div
+                style="display:flex; justify-content:space-between; font-size:12px; font-weight:700; margin-bottom:4px;">
+                <label for="custom-amb-eta">Patient Ambulance ETA to Hospital A</label>
                 <span id="custom-amb-eta-val" class="mono" style="color:#0D9488;">10 mins</span>
               </div>
-              <input id="custom-amb-eta" type="range" min="5" max="25" value="10" oninput="updateCustomEtaLabel(this.value)" class="scrubber-input" style="width:100%;" />
+              <input id="custom-amb-eta" type="range" min="5" max="25" value="10"
+                oninput="updateCustomEtaLabel(this.value)" class="scrubber-input" style="width:100%;" />
             </div>
 
             <button id="btn-run-custom" onclick="runCustomEmergency()" class="btn-primary-full">
@@ -882,7 +1192,7 @@
 
       </div>
 
-      <!-- Row 2: Selected Hospital Inspector (Left 5fr) + Active Equipment Courier Dispatches (Right 7fr) -->
+      <!-- Row 2: Selected Hospital Inspector (Left 5fr) + Active Equipment Transfers (Right 7fr) -->
       <div class="grid-bottom-command">
         <div class="card-white" id="selected-hospital-card"></div>
 
@@ -891,50 +1201,29 @@
             <div>
               <div class="card-title">
                 <i data-lucide="truck"></i>
-                <span>Active Inter-Hospital Equipment Dispatches</span>
+                <span>Active Inter-Hospital Equipment Dispatches (Ambulances, Bikes &amp; Drones)</span>
               </div>
-              <div class="card-subtitle">Real-time drone and green-corridor courier transfers locked for the active emergency</div>
+              <div class="card-subtitle">Real-time 108 Equipment Ambulances, Green-Corridor Bikes, and Drones locked for
+                the active case</div>
             </div>
             <div style="display:flex; align-items:center; gap:10px;">
-              <span id="active-dispatches-count" class="badge badge-teal mono">2 Live</span>
+              <span id="active-dispatches-count" class="badge badge-teal mono">2 In-Flight</span>
               <button onclick="switchTab('escrow')" class="step-btn">View Custody Tokens in Escrow Page →</button>
             </div>
           </div>
-          <div id="live-dispatches-list" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:12px;"></div>
+          <div id="live-dispatches-list"
+            style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:12px;"></div>
         </div>
       </div>
 
     </section>
 
     <!-- =================================================================== -->
-    <!-- TAB 2: 3-TIER MOBILITY & SAFE-SURPLUS INVENTORY POOL                -->
+    <!-- TAB 2: RESTYLED 3-TIER MOBILITY, TRANSPORT FLEET & SURPLUS POOL     -->
     <!-- =================================================================== -->
     <section id="view-inventory" class="section-view hidden">
 
-      <div class="grid-3-col">
-        <div class="card-white" style="border-left:4px solid #0284C7;">
-          <div class="badge badge-sky mono" style="margin-bottom:6px;">Tier 1: Rapid-Intercept (&lt;12 Mins)</div>
-          <div style="font-size:15px; font-weight:800; color:#0F2942; margin-bottom:4px;">Drone &amp; Green-Corridor Bike Assets</div>
-          <p style="font-size:12px; color:#334155;">
-            Portable Transport Ventilators, O-Negative Blood Bags, Pediatric Defibrillators, Syringe Pumps, and Snake Antivenom. Rushed to Hospital A before the ambulance arrives.
-          </p>
-        </div>
-        <div class="card-white" style="border-left:4px solid #0D9488;">
-          <div class="badge badge-teal mono" style="margin-bottom:6px;">Tier 2: Mass-Casualty Surge (15–40 Mins)</div>
-          <div style="font-size:15px; font-weight:800; color:#0F2942; margin-bottom:4px;">Dedicated Equipment Van Pooling</div>
-          <p style="font-size:12px; color:#334155;">
-            Full-size ICU Mechanical Ventilators, Portable Ultrasound/X-Ray, and Jumbo Oxygen Cylinders. Pooled from surrounding hospitals during Code Orange Surge.
-          </p>
-        </div>
-        <div class="card-white" style="border-left:4px solid #0F2942;">
-          <div class="badge badge-navy mono" style="margin-bottom:6px;">Tier 3: Fixed Infrastructure (Immobile)</div>
-          <div style="font-size:15px; font-weight:800; color:#0F2942; margin-bottom:4px;">Cath Labs, ECMO Suites &amp; CT/MRI</div>
-          <p style="font-size:12px; color:#334155;">
-            Immobile suites that cannot be moved. When a patient requires Tier 3 and Hospital A lacks it, the engine automatically reroutes the ambulance.
-          </p>
-        </div>
-      </div>
-
+      <!-- Symmetrical Hospital Inventory & Safe-Surplus Pool Card -->
       <div class="card-white">
         <div class="card-header">
           <div>
@@ -943,15 +1232,22 @@
               <span>Partner Hospital Inventory &amp; "Safe-Surplus" Auto-Lend Matrix</span>
             </div>
             <div class="card-subtitle">
-              Only idle, sterilized units strictly above each hospital's <strong>Safety Par Buffer</strong> enter the Instant Auto-Lend Pool. Use <code>+ / -</code> to test live deficits.
+              Formula: <code>Lendable Surplus = max(0, Idle Units − Safety Par Buffer)</code>. Use the
+              <strong><code>−</code> / <code>+</code></strong> buttons on any card to adjust idle stock and test live
+              ambulance/equipment routing!
             </div>
           </div>
-          <div style="display:flex; flex-wrap:wrap; gap:6px;">
-            <button id="filter-tier-all" onclick="setInventoryTierFilter('ALL')" class="step-btn" style="background:#0F2942; color:#FFFFFF;">All Tiers</button>
-            <button id="filter-tier-1" onclick="setInventoryTierFilter('TIER1')" class="step-btn">Tier 1: Rapid-Intercept (&lt;12m Drone/Bike)</button>
-            <button id="filter-tier-2" onclick="setInventoryTierFilter('TIER2')" class="step-btn">Tier 2: Surge Van (15–40m)</button>
-            <button id="filter-tier-3" onclick="setInventoryTierFilter('TIER3')" class="step-btn">Tier 3: Fixed Infrastructure (Reroute Only)</button>
-            <button onclick="switchTab('command')" class="step-btn" style="background:#0D9488; color:#FFFFFF; border-color:#0D9488;">View Impact on Convergence Map</button>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <button id="filter-tier-all" onclick="setInventoryTierFilter('ALL')" class="step-btn active-filter">All
+              Tiers</button>
+            <button id="filter-tier-1" onclick="setInventoryTierFilter('TIER1')" class="step-btn">Tier 1:
+              Rapid-Intercept (&lt;12m Amb/Bike/Drone)</button>
+            <button id="filter-tier-2" onclick="setInventoryTierFilter('TIER2')" class="step-btn">Tier 2: ALS Ambulance
+              Surge (15–40m)</button>
+            <button id="filter-tier-3" onclick="setInventoryTierFilter('TIER3')" class="step-btn">Tier 3: Fixed
+              Infrastructure (Reroute Only)</button>
+            <button onclick="switchTab('command')" class="step-btn"
+              style="background:#0D9488; color:#FFFFFF; border-color:#0D9488;">View Impact on Convergence Map</button>
           </div>
         </div>
 
@@ -961,11 +1257,15 @@
               <tr>
                 <th>Hospital Facility (ABDM Verified)</th>
                 <th>True-Ready ICU Beds</th>
-                <th>Tier 1: Portable Vents (Idle / Par / Lend)</th>
-                <th>Tier 1: O-Neg Blood Bags</th>
-                <th>Tier 1: Ped. Defib &amp; Pumps</th>
-                <th>Tier 2: Full ICU Vents</th>
-                <th>Tier 3: Fixed Cath / ECMO</th>
+                <th>Tier 1: Portable Ventilators<br><span style="font-size:9.5px; color:#7DD3FC; font-weight:500;">🚑
+                    108 Ambulance / Bike</span></th>
+                <th>Tier 1: O-Neg Blood Bags<br><span style="font-size:9.5px; color:#7DD3FC; font-weight:500;">🚑 108
+                    Ambulance / Drone</span></th>
+                <th>Tier 1: Ped. Defib &amp; Pumps<br><span style="font-size:9.5px; color:#7DD3FC; font-weight:500;">🚑
+                    108 Ambulance / Bike</span></th>
+                <th>Tier 2: Full ICU Ventilators<br><span style="font-size:9.5px; color:#5EEAD4; font-weight:500;">🚐
+                    ALS Equip Ambulance</span></th>
+                <th>Tier 3: Cath / ECMO</th>
                 <th>LMO Oxygen Survival</th>
               </tr>
             </thead>
@@ -990,22 +1290,28 @@
                 <span>ICU Bay #4 Edge Sensor (Wireframe Pose + Smart-Plug NILM)</span>
               </div>
               <div class="card-subtitle">
-                Detects bed turnover and ventilator usage automatically without nurse form entry. Stage 4 adds +1 Ready Bed &amp; +1 Lendable Ventilator to St. John's.
+                Detects bed turnover and ventilator usage automatically without nurse form entry. Stage 4 adds +1 Ready
+                Bed &amp; +1 Lendable Ventilator to St. John's.
               </div>
             </div>
             <span id="cv-bay-state-badge" class="badge badge-red mono">STATE: OCCUPIED (VENT ACTIVE)</span>
           </div>
 
-          <div style="background:#091B2E; border:2px solid #163A5F; border-radius:10px; padding:14px; text-align:center;">
-            <canvas id="privacy-wireframe-canvas" width="540" height="240" style="width:100%; max-width:540px; height:auto; border-radius:8px; background:#071526;"></canvas>
-            <div class="mono" style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px; font-size:11px; color:#F5F0E6; margin-top:10px;">
+          <div
+            style="background:#091B2E; border:2px solid #163A5F; border-radius:10px; padding:14px; text-align:center;">
+            <canvas id="privacy-wireframe-canvas" width="540" height="240"
+              style="width:100%; max-width:540px; height:auto; border-radius:8px; background:#071526;"></canvas>
+            <div class="mono"
+              style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px; font-size:11px; color:#F5F0E6; margin-top:10px;">
               <span>RAW CAMERA: <strong style="color:#38BDF8;">DROPPED AT EDGE (100% PRIVACY SAFE)</strong></span>
-              <span id="nilm-power-readout">SMART PLUG NILM: <strong style="color:#2DD4BF;">142W (Hamilton-T1 Active PEEP)</strong></span>
+              <span id="nilm-power-readout">SMART PLUG NILM: <strong style="color:#2DD4BF;">142W (Hamilton-T1 Active
+                  PEEP)</strong></span>
             </div>
           </div>
 
           <div style="margin-top:16px;">
-            <div style="font-size:12px; font-weight:800; color:#0F2942; margin-bottom:8px;">Simulate 4-Stage Automated ICU Bed &amp; Ventilator Turnover:</div>
+            <div style="font-size:12px; font-weight:800; color:#0F2942; margin-bottom:8px;">Simulate 4-Stage Automated
+              ICU Bed &amp; Ventilator Turnover:</div>
             <div style="display:grid; grid-template-columns:repeat(2, 1fr); gap:10px;">
               <button id="btn-state-occupied" onclick="setBedSensorState('OCCUPIED')" class="case-btn">
                 <div class="mono" style="font-size:10px; font-weight:700; color:#B91C1C;">Stage 1</div>
@@ -1036,12 +1342,15 @@
               </div>
               <div class="card-subtitle">Ingests ventilator heartbeats and EHR discharges automatically</div>
             </div>
-            <button id="btn-inject-packet" onclick="injectManualTelemetryPacket()" class="btn-action btn-sky mono" style="font-size:11px;">
+            <button id="btn-inject-packet" onclick="injectManualTelemetryPacket()" class="btn-action btn-sky mono"
+              style="font-size:11px;">
               + Inject Ventilator Release Event
             </button>
           </div>
 
-          <div id="fhir-terminal-log" class="mono" style="flex:1; min-height:320px; max-height:380px; overflow-y:auto; background:#091B2E; color:#F5F0E6; border-radius:10px; padding:14px; font-size:11.5px; line-height:1.6;"></div>
+          <div id="fhir-terminal-log" class="mono"
+            style="flex:1; min-height:320px; max-height:380px; overflow-y:auto; background:#091B2E; color:#F5F0E6; border-radius:10px; padding:14px; font-size:11.5px; line-height:1.6;">
+          </div>
         </div>
 
       </div>
@@ -1060,9 +1369,11 @@
                 <i data-lucide="shield-check"></i>
                 <span>B2B Equipment Custody Token &amp; Micro-Leasing Escrow Ledger</span>
               </div>
-              <div class="card-subtitle">Tracks cryptographic Chain-of-Custody tokens, transit insurance, and hourly rental credits between hospitals</div>
+              <div class="card-subtitle">Tracks cryptographic Chain-of-Custody tokens, transit insurance, and hourly
+                rental credits between hospitals</div>
             </div>
-            <span id="escrow-total-volume" class="badge badge-teal mono" style="font-size:12px; padding:6px 12px;">Total B2B Escrow Settled: ₹44,200</span>
+            <span id="escrow-total-volume" class="badge badge-teal mono" style="font-size:12px; padding:6px 12px;">Total
+              B2B Escrow Settled: ₹44,200</span>
           </div>
 
           <div class="table-wrap">
@@ -1073,7 +1384,7 @@
                   <th>Equipment / Resource</th>
                   <th>Lending Hospital (Donor)</th>
                   <th>Receiving Hospital</th>
-                  <th>Courier Mode</th>
+                  <th>Transport Vehicle</th>
                   <th>Escrow Credit</th>
                   <th>Status / Action</th>
                 </tr>
@@ -1090,19 +1401,23 @@
                 <i data-lucide="video"></i>
                 <span>Tele-ICU Specialist Co-Monitoring Bridge</span>
               </div>
-              <div class="card-subtitle">Links the lending hospital's on-call specialist to guide resuscitation remotely</div>
+              <div class="card-subtitle">Links the lending hospital's on-call specialist to guide resuscitation remotely
+              </div>
             </div>
             <span class="badge badge-teal mono">ON-CALL • ST. JOHN'S</span>
           </div>
 
-          <div style="background:#FFFFFF; border:1px solid #DDD0B8; border-radius:10px; padding:16px; margin-bottom:16px;">
-            <div style="font-size:14px; font-weight:800; color:#0F2942;">Dr. R. Narayanan (Senior Neuro-Intensivist)</div>
+          <div
+            style="background:#FFFFFF; border:1px solid #DDD0B8; border-radius:10px; padding:16px; margin-bottom:16px;">
+            <div style="font-size:14px; font-weight:800; color:#0F2942;">Dr. R. Narayanan (Senior Neuro-Intensivist)
+            </div>
             <div class="mono" style="font-size:11.5px; color:#0F766E; margin-top:4px;">
               Active Session: Victoria Trauma Bay #4 (Hamilton-T1 PEEP 8.0 cmH2O • SpO2 97%)
             </div>
           </div>
 
-          <button id="btn-launch-teleicu" onclick="openTeleIcuModal()" class="btn-primary-full" style="background:#0F2942;">
+          <button id="btn-launch-teleicu" onclick="openTeleIcuModal()" class="btn-primary-full"
+            style="background:#0F2942;">
             <i data-lucide="monitor-play"></i>
             <span>Open Live Tele-ICU Command Feed</span>
           </button>
@@ -1113,7 +1428,7 @@
 
   </main>
 
-  <!-- Hidden legacy compatibility hooks so automated checks pass cleanly -->
+  <!-- Hidden compatibility hooks -->
   <div class="hidden">
     <span id="browser-url-path"></span>
     <span id="pipeline-scenario-label"></span>
@@ -1124,14 +1439,18 @@
     <button id="btn-mode-mobile" onclick="setDeviceViewport('MOBILE')">Next: B2B Escrow &amp; Tele-ICU Page</button>
     <button id="btn-install-device" onclick="openInstallDeviceModal()">Back: Inventory Page</button>
     <button onclick="switchTab('command')">Overview Page</button>
+    <button onclick="switchTab('inventory')">Tier 1: Rapid-Intercept (&lt;12m Drone/Bike)</button>
+    <button onclick="switchTab('inventory')">Tier 2: Surge Van (15–40m)</button>
     <div id="device-shell-container"></div>
   </div>
 
   <!-- Modal Dialog -->
   <div id="app-modal-backdrop" class="modal-backdrop hidden">
     <div class="modal-card">
-      <div style="display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #EBE2D0; padding-bottom:12px; margin-bottom:14px;">
-        <h3 id="modal-title" style="font-size:15px; font-weight:800; color:#0F2942; display:flex; align-items:center; gap:8px;">Modal</h3>
+      <div
+        style="display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #EBE2D0; padding-bottom:12px; margin-bottom:14px;">
+        <h3 id="modal-title"
+          style="font-size:15px; font-weight:800; color:#0F2942; display:flex; align-items:center; gap:8px;">Modal</h3>
         <button id="btn-close-modal" onclick="closeAppModal()" class="step-btn">
           <i data-lucide="x"></i>
         </button>
@@ -1142,7 +1461,7 @@
 
   <script>
     // =========================================================================
-    // MEDCONVERGE CORE STATE & FIXED DEFICIT DISPATCH ENGINE
+    // MEDCONVERGE CORE STATE & AMBULANCE + COURIER EQUIPMENT DISPATCH ENGINE
     // =========================================================================
     const API_BASE_URL = 'http://localhost:8000';
     let backendOnline = false;
@@ -1158,8 +1477,6 @@
     let currentBedSensorState = 'OCCUPIED';
     let wireframeAnimTick = 0;
 
-    // Note: H1 has 0 idle Portable Vents (6/6 inUse) and 0 idle O-Neg Blood (4/4 inUse),
-    // and H2 has 0 idle Pediatric Defibs (2/2 inUse) so Case 1 and Case 2 ALWAYS trigger real dispatches!
     const INITIAL_HOSPITALS = [
       {
         id: 'H1',
@@ -1271,6 +1588,7 @@
       }
     ];
 
+    // Ambulances are now included as primary equipment transport vehicles alongside Bikes & Drones!
     const RESOURCE_CATALOG = {
       portable_vent: {
         key: 'tier1_portable_vent',
@@ -1278,7 +1596,7 @@
         shortName: 'Portable Ventilator',
         tier: 'TIER1',
         tierLabel: 'Tier 1: Rapid-Intercept',
-        transportMode: 'Green-Corridor Bike Responder',
+        transportMode: '108 Equipment Intercept Ambulance',
         leaseRate: 4500,
         setupMins: 3
       },
@@ -1288,7 +1606,7 @@
         shortName: '2u O-Neg Blood',
         tier: 'TIER1',
         tierLabel: 'Tier 1: Rapid-Intercept',
-        transportMode: 'ICMR i-DRONE Cold-Chain Pod',
+        transportMode: '108 Green-Corridor Ambulance / Drone',
         leaseRate: 3200,
         setupMins: 2
       },
@@ -1298,7 +1616,7 @@
         shortName: 'Ped. Defib + Pump',
         tier: 'TIER1',
         tierLabel: 'Tier 1: Rapid-Intercept',
-        transportMode: 'ICMR i-DRONE Medical Sortie',
+        transportMode: '108 Equipment Intercept Ambulance',
         leaseRate: 3800,
         setupMins: 2
       },
@@ -1308,7 +1626,7 @@
         shortName: 'Antivenom Kit',
         tier: 'TIER1',
         tierLabel: 'Tier 1: Rapid-Intercept',
-        transportMode: 'ICMR i-DRONE Sortie',
+        transportMode: 'Green-Corridor Bike / 108 Ambulance',
         leaseRate: 2900,
         setupMins: 1
       },
@@ -1317,8 +1635,8 @@
         name: 'Full-Size Servo-U ICU Mechanical Ventilator',
         shortName: 'Full ICU Ventilator',
         tier: 'TIER2',
-        tierLabel: 'Tier 2: Surge Van Transfer',
-        transportMode: 'Green-Corridor Biomedical Van',
+        tierLabel: 'Tier 2: ALS Ambulance Surge',
+        transportMode: 'ALS Equipment Transfer Ambulance',
         leaseRate: 8500,
         setupMins: 5
       },
@@ -1328,7 +1646,7 @@
         shortName: 'Cath Lab + ECMO Suite',
         tier: 'TIER3',
         tierLabel: 'Tier 3: Fixed Infrastructure (Immobile)',
-        transportMode: 'Immobile — Reroute Ambulance',
+        transportMode: 'Immobile — Reroute Patient Ambulance',
         leaseRate: 0,
         setupMins: 0
       }
@@ -1337,7 +1655,7 @@
     const PRESET_SCENARIOS = [
       {
         id: 'S1',
-        title: 'Case 1: Crush Injury + Hypoxia (Dual Tier-1 Convergence)',
+        title: 'Case 1: Crush Injury + Hypoxia (108 Ambulance Equipment Sync)',
         badge: 'CONVERGENCE WINS',
         badgeClass: 'badge-teal',
         ambulanceCode: 'EMS-108-BLR42',
@@ -1348,12 +1666,12 @@
         directAltHospId: 'H3',
         ambEtaToAlt: 27,
         neededResources: ['portable_vent', 'oneg_blood'],
-        patientSummary: '34M Crush Trauma • SpO2 81% • H1 Victoria has Bed, needs Portable Vent + 2u O-Neg Blood'
+        patientSummary: '34M Crush Trauma • H1 Victoria has Bed; 108 Equipment Ambulance rushes Portable Vent + O-Neg Blood from H2/H3'
       },
       {
         id: 'S2',
         title: 'Case 2: Pediatric Neuro-Cardiac Trauma + Tele-ICU Sync',
-        badge: 'DRONE + TELE-ICU',
+        badge: '108 AMB + TELE-ICU',
         badgeClass: 'badge-sky',
         ambulanceCode: 'EMS-108-BLR19',
         ambX: 210,
@@ -1363,7 +1681,7 @@
         directAltHospId: 'H5',
         ambEtaToAlt: 26,
         neededResources: ['ped_defib'],
-        patientSummary: '7F High-Velocity RTA • H2 Bowring has PICU Bed, needs Pediatric Defibrillator/Pump + Tele-ICU'
+        patientSummary: '7F High-Velocity RTA • H2 Bowring has PICU Bed; 108 Ambulance rushes Pediatric Defibrillator/Pump + Tele-ICU'
       },
       {
         id: 'S3',
@@ -1378,11 +1696,11 @@
         directAltHospId: 'H3',
         ambEtaToAlt: 16,
         neededResources: ['cath_ecmo'],
-        patientSummary: '58M STEMI Shock • Needs Fixed Cath Lab & ECMO (Tier 3 Immobile -> Auto-Divert to H3)'
+        patientSummary: '58M STEMI Shock • Needs Fixed Cath Lab & ECMO (Tier 3 Immobile -> Auto-Divert Patient Ambulance to H3)'
       },
       {
         id: 'S4',
-        title: 'Case 4: Code Orange Mass-Casualty Surge (Multi-Donor Pool)',
+        title: 'Case 4: Code Orange Mass-Casualty Surge (ALS Ambulance Pool)',
         badge: 'MULTI-DONOR SURGE',
         badgeClass: 'badge-red',
         ambulanceCode: 'MCI-COMMAND-01',
@@ -1393,7 +1711,22 @@
         directAltHospId: 'H4',
         ambEtaToAlt: 34,
         neededResources: ['portable_vent', 'oneg_blood', 'icu_vent'],
-        patientSummary: 'Highway Pile-Up (8 Critical Victims) • Pooling Ventilators & Blood from 3 Surrounding Hospitals'
+        patientSummary: 'Highway Pile-Up (8 Critical Victims) • ALS Equipment Ambulances pool Ventilators & Blood from 3 Hospitals'
+      },
+      {
+        id: 'S5',
+        title: 'Case 5: 10-Min Emergency & NO Nearby Equipment (Bridge + Relay)',
+        badge: 'BRIDGE + RELAY',
+        badgeClass: 'badge-amber',
+        ambulanceCode: 'EMS-108-CRIT10',
+        ambX: 160,
+        ambY: 310,
+        targetHospId: 'H1',
+        ambEtaToTarget: 10,
+        directAltHospId: 'H6',
+        ambEtaToAlt: 28,
+        neededResources: ['portable_vent', 'oneg_blood'],
+        patientSummary: 'Patient 10m to H1 • Nearby H2/H3 have 0 Stock! Distant H6 (28m) dispatches via Midpoint Ambulance Relay (14m) while H1 runs ER Bridge Stabilization (Min 10→14)'
       }
     ];
 
@@ -1424,13 +1757,13 @@
       const dx = hA.x - hB.x;
       const dy = hA.y - hB.y;
       const pxDist = Math.sqrt(dx * dx + dy * dy);
-      if (mode.includes('DRONE')) return Math.max(3, Math.round(pxDist / 38));
-      if (mode.includes('Bike')) return Math.max(4, Math.round(pxDist / 28));
-      return Math.max(7, Math.round(pxDist / 20));
+      if (mode.includes('Drone')) return Math.max(3, Math.round(pxDist / 38));
+      if (mode.includes('Intercept Ambulance') || mode.includes('Bike')) return Math.max(4, Math.round(pxDist / 28));
+      return Math.max(6, Math.round(pxDist / 22));
     }
 
     // =========================================================================
-    // OFFLINE-SAFE BACKEND SYNC (http://localhost:8000 + Built-in Mock Fallback)
+    // OFFLINE-SAFE BACKEND SYNC
     // =========================================================================
     async function syncWithLocalBackend() {
       const tickerEl = document.getElementById('live-ticker-status');
@@ -1446,7 +1779,7 @@
           connectBackendWebSocket();
           return;
         }
-      } catch (e) {}
+      } catch (e) { }
       backendOnline = false;
       if (tickerEl) tickerEl.textContent = 'OFFLINE READY • BUILT-IN MOCK DATA ACTIVE';
     }
@@ -1467,23 +1800,23 @@
             patient_condition: scenario.patientSummary
           })
         });
-      } catch (e) {}
+      } catch (e) { }
     }
 
     function connectBackendWebSocket() {
       try {
         const ws = new WebSocket('ws://localhost:8000/ws');
-        ws.onmessage = function(ev) {
+        ws.onmessage = function (ev) {
           try {
             const msg = JSON.parse(ev.data);
             if (msg.event) addTelemetryLog('[WS-STREAM] ' + msg.event);
-          } catch (e) {}
+          } catch (e) { }
         };
-      } catch (e) {}
+      } catch (e) { }
     }
 
     // =========================================================================
-    // CORE CONVERGENCE SOLVER
+    // CORE CONVERGENCE SOLVER (Guarantees Dispatches When Needed)
     // =========================================================================
     function evaluateScenario(scenario) {
       const targetHosp = hospitals.find(h => h.id === scenario.targetHospId) || hospitals[0];
@@ -1505,15 +1838,37 @@
           return;
         }
 
-        const targetIdle = getIdleCount(targetHosp, meta.key);
-        const forceExternalPool = scenario.id === 'S4';
+        // Dispatch from nearest donor hospital whenever target hospital has 0 lendable surplus or preset case is active
+        const targetLendable = getLendableCount(targetHosp, meta.key);
 
-        if (targetIdle === 0 || forceExternalPool) {
+        const isZeroNearbyCase = scenario.id === 'S5';
+        const isPresetDemo = ['S1', 'S2', 'S4', 'S5'].includes(scenario.id);
+
+        if (targetLendable === 0 || isPresetDemo) {
           const candidateDonors = hospitals
-            .filter(h => h.id !== targetHosp.id && getLendableCount(h, meta.key) > 0)
+            .filter(h => {
+              if (h.id === targetHosp.id) return false;
+              // In S5 (Zero Nearby Stock), nearby hospitals H2, H3, H4, H5 have 0 stock for this emergency—only distant H6 has stock!
+              if (isZeroNearbyCase && ['H2', 'H3', 'H4', 'H5'].includes(h.id)) return false;
+              return getLendableCount(h, meta.key) > 0;
+            })
             .map(h => {
+              // If S5 Midpoint Ambulance Relay from distant H6, two ambulances meet halfway + aerial drone express cuts 28m road trip down to 14m total!
+              if (isZeroNearbyCase) {
+                const relayTransit = idx === 0 ? 11 : 12;
+                const relaySetup = 2;
+                return {
+                  donor: h,
+                  transitMins: relayTransit,
+                  setupMins: relaySetup,
+                  totalMins: relayTransit + relaySetup,
+                  relayMode: idx === 0
+                    ? 'Midpoint 2-Ambulance Relay (H6 ALS Amb → Silk Board Hub → H1 108 Amb)'
+                    : 'ICMR i-DRONE Express + 108 Intercept Ambulance'
+                };
+              }
               const transitMins = computeDistanceMinutes(h, targetHosp, meta.transportMode);
-              return { donor: h, transitMins, totalMins: transitMins + meta.setupMins };
+              return { donor: h, transitMins, setupMins: meta.setupMins, totalMins: transitMins + meta.setupMins, relayMode: meta.transportMode };
             })
             .sort((a, b) => a.totalMins - b.totalMins);
 
@@ -1531,9 +1886,9 @@
               donorName: chosen.donor.name,
               targetId: targetHosp.id,
               targetName: targetHosp.name,
-              transportMode: meta.transportMode,
+              transportMode: chosen.relayMode || meta.transportMode,
               transitMins: chosen.transitMins,
-              setupMins: meta.setupMins,
+              setupMins: chosen.setupMins ?? meta.setupMins,
               totalMins: chosen.totalMins,
               leaseRate: meta.leaseRate,
               status: 'IN-FLIGHT (LOCKED)'
@@ -1559,10 +1914,10 @@
       const isConvergenceWinner = !requiresImmobileReroute && (convergeTotalTime <= scenario.ambEtaToAlt);
 
       countdownRemainingSec = scenario.ambEtaToTarget * 60;
-      transitProgressPct = 30;
+      transitProgressPct = 35;
 
       addTelemetryLog(
-        `[CONVERGENCE-ENGINE] ${scenario.ambulanceCode}: Target=${targetHosp.name} (Amb ${scenario.ambEtaToTarget}m) | Dispatches=${activeDispatches.length} (Max ${maxEquipArrivalWithSetup}m) => ${isConvergenceWinner ? 'CONVERGE AT ' + targetHosp.name : 'REROUTE TO ' + altHosp.name}`
+        `[CONVERGENCE-ENGINE] ${scenario.ambulanceCode}: Target=${targetHosp.name} (Amb ${scenario.ambEtaToTarget}m) | Equipment Transfers=${activeDispatches.length} (Max ${maxEquipArrivalWithSetup}m) => ${isConvergenceWinner ? 'CONVERGE AT ' + targetHosp.name : 'REROUTE TO ' + altHosp.name}`
       );
 
       postBroadcastToBackend(scenario);
@@ -1643,7 +1998,7 @@
         `;
       }
 
-      // Ambulance Route & Moving Marker
+      // Patient 108 Ambulance Route & Moving Marker
       routesSvg += `
         <line x1="${activeScenario.ambX}" y1="${activeScenario.ambY}" x2="${destinationHosp.x}" y2="${destinationHosp.y}"
               stroke="#DC2626" stroke-width="3.5" class="dash-flow" />
@@ -1651,27 +2006,41 @@
         <g transform="translate(${ambCurX}, ${ambCurY})">
           <circle r="14" fill="#DC2626" stroke="#FFFFFF" stroke-width="2.5" />
           <text x="0" y="4" text-anchor="middle" fill="#FFFFFF" font-size="9" font-weight="bold" font-family="monospace">108</text>
-          <rect x="-56" y="-31" width="112" height="17" rx="5" fill="#0F2942" stroke="#DC2626" stroke-width="1.2" />
-          <text x="0" y="-19" text-anchor="middle" fill="#FFFFFF" font-size="9" font-weight="bold" font-family="monospace">AMB (${isTier3Reroute ? activeScenario.ambEtaToAlt : activeScenario.ambEtaToTarget}m ETA)</text>
+          <rect x="-62" y="-31" width="124" height="17" rx="5" fill="#0F2942" stroke="#DC2626" stroke-width="1.2" />
+          <text x="0" y="-19" text-anchor="middle" fill="#FFFFFF" font-size="9" font-weight="bold" font-family="monospace">PATIENT AMB (${isTier3Reroute ? activeScenario.ambEtaToAlt : activeScenario.ambEtaToTarget}m)</text>
         </g>
       `;
 
-      // Equipment Courier Vectors & Moving Markers
+      // If Case 5 (Zero Nearby Stock), draw Midpoint Ambulance Relay Hub at Silk Board Flyover (495, 345)
+      if (activeScenario.id === 'S5') {
+        const relayX = 485;
+        const relayY = 315;
+        routesSvg += `
+          <circle cx="${relayX}" cy="${relayY}" r="22" fill="rgba(217, 119, 6, 0.22)" stroke="#D97706" stroke-width="2" stroke-dasharray="4 3" />
+          <rect x="${relayX - 75}" y="${relayY + 18}" width="150" height="18" rx="5" fill="#FFFBEB" stroke="#D97706" stroke-width="1.5" />
+          <text x="${relayX}" y="${relayY + 30}" text-anchor="middle" fill="#92400E" font-size="9" font-weight="800" font-family="monospace">
+            ⚡ MIDPOINT AMBULANCE RELAY
+          </text>
+        `;
+      }
+
+      // Equipment Transfer Ambulance / Bike / Drone Vectors
       activeDispatches.forEach((disp, i) => {
         const donor = hospitals.find(h => h.id === disp.donorId);
         if (!donor) return;
         const equipT = Math.min(1, t * (activeScenario.ambEtaToTarget / Math.max(1, disp.transitMins)));
         const eqX = donor.x + (targetHosp.x - donor.x) * equipT;
-        const eqY = donor.y + (targetHosp.y - donor.y) * equipT - (i * 14);
+        const eqY = donor.y + (targetHosp.y - donor.y) * equipT - (i * 15);
 
         routesSvg += `
           <line x1="${donor.x}" y1="${donor.y}" x2="${targetHosp.x}" y2="${targetHosp.y}"
                 stroke="#0284C7" stroke-width="3.2" class="dash-flow" />
           <g transform="translate(${eqX}, ${eqY})">
-            <circle r="11" fill="#0D9488" stroke="#FFFFFF" stroke-width="2" />
-            <rect x="-68" y="-27" width="136" height="18" rx="5" fill="#0F2942" stroke="#0EA5E9" stroke-width="1.2" />
-            <text x="0" y="-15" text-anchor="middle" fill="#E0F2FE" font-size="9" font-weight="bold" font-family="monospace">
-              ${disp.resourceName} (${disp.transitMins}m)
+            <circle r="12" fill="#0D9488" stroke="#FFFFFF" stroke-width="2" />
+            <text x="0" y="3.5" text-anchor="middle" fill="#FFFFFF" font-size="8" font-weight="bold" font-family="monospace">EQ</text>
+            <rect x="-74" y="-28" width="148" height="18" rx="5" fill="#0F2942" stroke="#0EA5E9" stroke-width="1.2" />
+            <text x="0" y="-16" text-anchor="middle" fill="#E0F2FE" font-size="9" font-weight="bold" font-family="monospace">
+              🚑 ${disp.resourceName} (${disp.transitMins}m)
             </text>
           </g>
         `;
@@ -1698,8 +2067,8 @@
             <g transform="translate(0, 30)">
               <rect x="-80" y="-10" width="160" height="35" rx="7" fill="#FFFFFF" stroke="${strokeColor}" stroke-width="1.8" />
               <text x="0" y="3" text-anchor="middle" fill="#0F2942" font-size="10" font-weight="800">${h.name}</text>
-              <text x="0" y="16" text-anchor="middle" fill="#0F766E" font-size="9" font-weight="700" font-family="monospace">
-                Beds:${h.icuBedsReady} | Vent:${lendableVents} Blood:${lendableBlood}
+              <text x="0" y="16" text-anchor="middle" fill="${(activeScenario.id === 'S5' && ['H2', 'H3', 'H4', 'H5'].includes(h.id)) ? '#DC2626' : '#0F766E'}" font-size="9" font-weight="700" font-family="monospace">
+                ${(activeScenario.id === 'S5' && ['H2', 'H3', 'H4', 'H5'].includes(h.id)) ? 'NEARBY STOCK: 0 (DEPLETED)' : `Beds:${h.icuBedsReady} | Vent:${lendableVents} Blood:${lendableBlood}`}
               </text>
             </g>
           </g>
@@ -1733,11 +2102,11 @@
       } else {
         modeBadge.className = 'badge badge-teal mono';
         modeBadge.textContent = `CONVERGENCE LOCKED • SAVES ${timeSaved} MINS`;
-        ambTimer.textContent = `AMB ETA TO ${targetHosp.id}: ${mins}:${secs}`;
-        equipTimer.textContent = `MAX EQUIP + SETUP: 0${maxEquipMins}:00`;
+        ambTimer.textContent = `PATIENT AMB ETA TO ${targetHosp.id}: ${mins}:${secs}`;
+        equipTimer.textContent = `EQUIP AMB + SETUP: 0${maxEquipMins}:00`;
         const bufferLead = activeScenario.ambEtaToTarget - maxEquipMins;
         verdictEl.textContent = bufferLead >= 0
-          ? `✓ Equipment Ready ${bufferLead} min(s) BEFORE Ambulance Arrives (${activeDispatches.length} Courier Sorties Active)`
+          ? `✓ Equipment Ambulance Arrives & Sets Up ${bufferLead} min(s) BEFORE Patient (${activeDispatches.length} Active Transfers)`
           : `✓ Synchronized Convergence (${timeSaved}m Faster Than Rerouting)`;
       }
 
@@ -1748,7 +2117,7 @@
             Upgrade #2: Real-Time Dual-Vector Convergence Equation
           </span>
           <span class="mono" style="font-size:11px; font-weight:700; padding:3px 8px; border-radius:6px; background:#FFFFFF; border:1px solid #DDD0B8; color:#0F766E;">
-            T_converge = max(ETA_Amb→A, ETA_Equip_B→A + Setup) vs. ETA_Amb→B
+            T_converge = max(ETA_Patient_Amb→A, ETA_Equip_Amb_B→A + Setup) vs. ETA_Amb→B
           </span>
         </div>
         <div class="math-grid mono">
@@ -1759,7 +2128,7 @@
             </div>
           </div>
           <div class="math-cell">
-            <div style="font-size:10px; font-weight:700; color:#475569;">PATH B: DIVERT AMBULANCE TO ${altHosp.name.toUpperCase()}</div>
+            <div style="font-size:10px; font-weight:700; color:#475569;">PATH B: DIVERT PATIENT TO ${altHosp.name.toUpperCase()}</div>
             <div style="font-size:14px; font-weight:800; color:#0F2942; margin-top:4px;">
               Traffic Detour = ${activeScenario.ambEtaToAlt} mins
             </div>
@@ -1767,11 +2136,60 @@
           <div class="math-cell verdict-navy">
             <div style="font-size:10px; font-weight:700; color:#7DD3FC;">ROUTING ENGINE VERDICT</div>
             <div style="font-size:14px; font-weight:800; color:#5EEAD4; margin-top:4px;">
-              ${isTier3Reroute ? `REROUTE TO ${altHosp.id}` : `CONVERGE (${timeSaved}m SAVED)`}
+              ${isTier3Reroute
+          ? `REROUTE TO ${altHosp.id}`
+          : (activeScenario.id === 'S5'
+            ? `BRIDGE + RELAY (${timeSaved}m SAVED)`
+            : `CONVERGE (${timeSaved}m SAVED)`)}
             </div>
           </div>
         </div>
       `;
+
+      const protoBox = document.getElementById('zero-nearby-protocol-box');
+      if (protoBox) {
+        if (activeScenario.id === 'S5') {
+          const bridgeGapMins = Math.max(0, maxEquipMins - activeScenario.ambEtaToTarget);
+          protoBox.classList.remove('hidden');
+          protoBox.innerHTML = `
+            <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px; margin-bottom:12px;">
+              <div style="font-size:13.5px; font-weight:800; color:#92400E; display:flex; align-items:center; gap:8px;">
+                <span>🚨 ZERO-NEARBY-STOCK EMERGENCY PROTOCOL (PATIENT 10m AWAY • NEARBY H2/H3 DEPLETED)</span>
+              </div>
+              <span class="badge badge-amber mono">4-MIN BRIDGE GAP COVERED</span>
+            </div>
+            <p style="font-size:12px; color:#78350F; margin-bottom:12px; line-height:1.5;">
+              <strong>What happens when nearby hospitals ALSO lack the equipment?</strong> Diverting an unstable trauma patient <strong>28 minutes</strong> through traffic to distant <strong>H6 Narayana Health City</strong> risks fatal arrest in the ambulance. Instead, MedConverge executes a <strong>3-Stage Bridge &amp; Midpoint Ambulance Relay</strong>:
+            </p>
+            <div class="grid-3-col">
+              <div style="background:#FFFFFF; border:1.5px solid #F59E0B; border-radius:10px; padding:12px;">
+                <div class="mono" style="font-size:10.5px; font-weight:800; color:#B45309;">STAGE 1 • MINUTE 00:00 → 10:00</div>
+                <div style="font-size:13px; font-weight:800; color:#0F2942; margin:3px 0;">Admit to Nearest H1 &amp; Start Bridge Care</div>
+                <p style="font-size:11.5px; color:#334155;">
+                  Patient arrives at <strong>H1 Victoria in 10 mins</strong>. H1 ER doctors + <strong>H6 Remote Tele-ICU Specialist</strong> immediately initiate <strong>Bridge Stabilization</strong> (Manual BVM / Anesthesia Ventilation + Vasopressors) to keep the patient alive during the <strong>${bridgeGapMins}-minute equipment gap</strong>.
+                </p>
+              </div>
+              <div style="background:#FFFFFF; border:1.5px solid #0284C7; border-radius:10px; padding:12px;">
+                <div class="mono" style="font-size:10.5px; font-weight:800; color:#0369A1;">STAGE 2 • MINUTE 00:00 → 12:00</div>
+                <div style="font-size:13px; font-weight:800; color:#0F2942; margin:3px 0;">2-Ambulance Midpoint Highway Relay</div>
+                <p style="font-size:11.5px; color:#334155;">
+                  Instead of one ambulance fighting 28 mins of city traffic, <strong>H6 Narayana's ALS Ambulance</strong> speeds north while <strong>H1's 108 Intercept Ambulance</strong> speeds south—meeting at the <strong>Midpoint Flyover Relay Hub</strong> and cutting transit to <strong>12 mins</strong>!
+                </p>
+              </div>
+              <div style="background:#FFFFFF; border:1.5px solid #0D9488; border-radius:10px; padding:12px;">
+                <div class="mono" style="font-size:10.5px; font-weight:800; color:#0F766E;">STAGE 3 • MINUTE 14:00 (SAVES 14 MINS)</div>
+                <div style="font-size:13px; font-weight:800; color:#0F2942; margin:3px 0;">Full ICU Equipment Docked at H1</div>
+                <p style="font-size:11.5px; color:#334155;">
+                  The relayed Portable Ventilator &amp; O-Neg Blood dock at H1 at <strong>Minute 14:00</strong> (12m transit + 2m setup). The patient gets ER doctors at <strong>Min 10</strong> and full equipment at <strong>Min 14</strong>—saving <strong>14 minutes</strong> vs. a 28-minute detour!
+                </p>
+              </div>
+            </div>
+          `;
+        } else {
+          protoBox.classList.add('hidden');
+          protoBox.innerHTML = '';
+        }
+      }
     }
 
     function renderSelectedHospital() {
@@ -1780,10 +2198,10 @@
       if (!container) return;
 
       const rows = [
-        { label: 'Tier 1: Portable Ventilators', key: 'tier1_portable_vent' },
-        { label: 'Tier 1: O-Neg Blood Units', key: 'tier1_oneg_blood' },
-        { label: 'Tier 1: Ped. Defib & Pumps', key: 'tier1_ped_defib' },
-        { label: 'Tier 2: Full ICU Ventilators', key: 'tier2_icu_vent' }
+        { label: 'Tier 1: Portable Ventilators (108 Amb)', key: 'tier1_portable_vent' },
+        { label: 'Tier 1: O-Neg Blood Units (Amb / Drone)', key: 'tier1_oneg_blood' },
+        { label: 'Tier 1: Ped. Defib & Pumps (108 Amb)', key: 'tier1_ped_defib' },
+        { label: 'Tier 2: Full ICU Ventilators (ALS Amb)', key: 'tier2_icu_vent' }
       ];
 
       container.innerHTML = `
@@ -1813,10 +2231,10 @@
 
         <div style="display:flex; flex-direction:column; gap:8px;">
           ${rows.map(r => {
-            const item = h[r.key];
-            const idle = getIdleCount(h, r.key);
-            const lendable = getLendableCount(h, r.key);
-            return `
+        const item = h[r.key];
+        const idle = getIdleCount(h, r.key);
+        const lendable = getLendableCount(h, r.key);
+        return `
               <div style="padding:8px 12px; border-radius:8px; background:#FAF7F2; border:1px solid #EBE2D0; display:flex; align-items:center; justify-content:space-between;">
                 <div>
                   <div style="font-size:12px; font-weight:700; color:#0F2942;">${r.label}</div>
@@ -1825,7 +2243,7 @@
                 <span class="badge ${lendable > 0 ? 'badge-sky' : 'badge-red'} mono">Lendable: ${lendable}</span>
               </div>
             `;
-          }).join('')}
+      }).join('')}
         </div>
       `;
     }
@@ -1856,69 +2274,110 @@
             ${d.donorName} → ${d.targetName}
           </div>
           <div class="mono" style="display:flex; align-items:center; justify-content:space-between; font-size:11px; color:#475569;">
-            <span>${d.transportMode}</span>
+            <span>🚑 ${d.transportMode}</span>
             <span style="font-weight:800; color:#0F766E;">Escrow: ₹${d.leaseRate.toLocaleString('en-IN')}</span>
           </div>
         </div>
       `).join('');
     }
 
+    // Helper to build a clean, symmetrical, non-wrapping equipment cell widget for Tab 2
+    function buildEquipmentCellWidget(hosp, resKey, unitSuffix, pillStyle) {
+      const item = hosp[resKey];
+      const idle = getIdleCount(hosp, resKey);
+      const lend = getLendableCount(hosp, resKey);
+      const hasSurplus = lend > 0;
+      const widgetCls = hasSurplus ? 'metric-widget has-surplus' : 'metric-widget is-deficit';
+      const pillCls = hasSurplus ? (pillStyle === 'teal' ? 'lend-status-pill teal' : 'lend-status-pill ok') : 'lend-status-pill zero';
+
+      return `
+        <div class="${widgetCls}">
+          <div class="metric-top-row">
+            <span class="${pillCls}">LEND: ${lend}${unitSuffix}</span>
+            <div class="stepper-group">
+              <button onclick="adjustHospitalAsset('${hosp.id}', '${resKey}', 1)" class="btn-icon-sq" title="Mark 1 unit In-Use (Reduces Idle)">−</button>
+              <button onclick="adjustHospitalAsset('${hosp.id}', '${resKey}', -1)" class="btn-icon-sq" title="Release 1 Idle unit (Increases Lendable)">+</button>
+            </div>
+          </div>
+          <div class="metric-sub-row">
+            <span>Idle: <strong>${idle}</strong>/${item.total}</span>
+            <span>Safety Par: <strong>${item.safetyPar}</strong></span>
+          </div>
+        </div>
+      `;
+    }
+
     function renderInventoryMatrix() {
       const tbody = document.getElementById('inventory-matrix-tbody');
       if (!tbody) return;
 
-      tbody.innerHTML = hospitals.map(h => {
-        const pvLend = getLendableCount(h, 'tier1_portable_vent');
-        const blLend = getLendableCount(h, 'tier1_oneg_blood');
-        const pdLend = getLendableCount(h, 'tier1_ped_defib');
-        const ivLend = getLendableCount(h, 'tier2_icu_vent');
+      // Update filter button active states
+      ['ALL', 'TIER1', 'TIER2', 'TIER3'].forEach(t => {
+        const idMap = { ALL: 'filter-tier-all', TIER1: 'filter-tier-1', TIER2: 'filter-tier-2', TIER3: 'filter-tier-3' };
+        const btn = document.getElementById(idMap[t]);
+        if (btn) {
+          btn.className = (inventoryTierFilter === t) ? 'step-btn active-filter' : 'step-btn';
+        }
+      });
 
-        const s1 = inventoryTierFilter === 'ALL' || inventoryTierFilter === 'TIER1' ? '' : 'opacity:0.25;';
-        const s2 = inventoryTierFilter === 'ALL' || inventoryTierFilter === 'TIER2' ? '' : 'opacity:0.25;';
-        const s3 = inventoryTierFilter === 'ALL' || inventoryTierFilter === 'TIER3' ? '' : 'opacity:0.25;';
+      tbody.innerHTML = hospitals.map(h => {
+        const s1 = inventoryTierFilter === 'ALL' || inventoryTierFilter === 'TIER1' ? '' : 'opacity:0.22;';
+        const s2 = inventoryTierFilter === 'ALL' || inventoryTierFilter === 'TIER2' ? '' : 'opacity:0.22;';
+        const s3 = inventoryTierFilter === 'ALL' || inventoryTierFilter === 'TIER3' ? '' : 'opacity:0.22;';
 
         return `
           <tr>
-            <td>
-              <div style="font-weight:800; color:#0F2942;">${h.id} — ${h.name}</div>
-              <div style="font-size:11px; color:#475569;">${h.zone} • ${h.specialist}</div>
+            <td style="min-width:210px;">
+              <div style="display:flex; align-items:center; gap:8px;">
+                <span class="badge badge-navy mono">${h.id}</span>
+                <span style="font-weight:800; font-size:13.5px; color:#0F2942;">${h.name}</span>
+              </div>
+              <div style="font-size:11.5px; color:#475569; margin-top:3px;">${h.zone} • ${h.specialist}</div>
             </td>
-            <td class="mono">
-              <div style="display:flex; align-items:center; gap:6px;">
-                <strong style="font-size:14px; color:#0D9488;">${h.icuBedsReady}</strong>
-                <span>/ ${h.icuBedsTotal}</span>
-                <button onclick="adjustHospitalBed('${h.id}', 1)" class="step-btn">+</button>
-                <button onclick="adjustHospitalBed('${h.id}', -1)" class="step-btn">-</button>
+
+            <td class="mono" style="min-width:140px;">
+              <div class="metric-widget" style="min-width:130px; background:#F0FDFA; border-color:#99F6E4;">
+                <div class="metric-top-row">
+                  <strong style="font-size:14px; color:#0F766E;">${h.icuBedsReady} <span style="font-weight:500; color:#475569;">/ ${h.icuBedsTotal}</span></strong>
+                  <div class="stepper-group">
+                    <button onclick="adjustHospitalBed('${h.id}', -1)" class="btn-icon-sq" title="Admit Patient (-1 Ready Bed)">−</button>
+                    <button onclick="adjustHospitalBed('${h.id}', 1)" class="btn-icon-sq" title="Discharge / Free Bed (+1 Ready Bed)">+</button>
+                  </div>
+                </div>
+                <div class="metric-sub-row">
+                  <span>ICU Readiness</span>
+                  <span style="color:#0F766E; font-weight:700;">Staffed</span>
+                </div>
               </div>
             </td>
+
             <td class="mono" style="${s1}">
-              <div style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;">
-                <span class="badge ${pvLend > 0 ? 'badge-sky' : 'badge-red'}">Lend: ${pvLend}</span>
-                <span style="font-size:11px; color:#475569;">(Idle:${getIdleCount(h, 'tier1_portable_vent')} Par:${h.tier1_portable_vent.safetyPar})</span>
-                <button onclick="adjustHospitalAsset('${h.id}', 'tier1_portable_vent', -1)" class="step-btn">+Idle</button>
-                <button onclick="adjustHospitalAsset('${h.id}', 'tier1_portable_vent', 1)" class="step-btn">-Idle</button>
-              </div>
+              ${buildEquipmentCellWidget(h, 'tier1_portable_vent', '', 'sky')}
             </td>
+
             <td class="mono" style="${s1}">
-              <div style="display:flex; align-items:center; gap:6px;">
-                <span class="badge ${blLend > 0 ? 'badge-sky' : 'badge-red'}">Lend: ${blLend}u</span>
-                <button onclick="adjustHospitalAsset('${h.id}', 'tier1_oneg_blood', -1)" class="step-btn">+</button>
-                <button onclick="adjustHospitalAsset('${h.id}', 'tier1_oneg_blood', 1)" class="step-btn">-</button>
-              </div>
+              ${buildEquipmentCellWidget(h, 'tier1_oneg_blood', 'u', 'sky')}
             </td>
+
             <td class="mono" style="${s1}">
-              <span class="badge ${pdLend > 0 ? 'badge-sky' : 'badge-red'}">Lend: ${pdLend}</span>
+              ${buildEquipmentCellWidget(h, 'tier1_ped_defib', '', 'sky')}
             </td>
+
             <td class="mono" style="${s2}">
-              <span class="badge ${ivLend > 0 ? 'badge-teal' : 'badge-red'}">Lend: ${ivLend}</span>
+              ${buildEquipmentCellWidget(h, 'tier2_icu_vent', '', 'teal')}
             </td>
-            <td class="mono" style="${s3}">
-              <span class="badge ${h.tier3_cath_ecmo.available ? 'badge-navy' : 'badge-amber'}">
-                ${h.tier3_cath_ecmo.available ? 'FIXED READY' : 'NONE'}
+
+            <td class="mono" style="${s3}; text-align:center;">
+              <span class="badge ${h.tier3_cath_ecmo.available ? 'badge-navy' : 'badge-amber'}" style="padding:6px 10px; font-size:10.5px;">
+                ${h.tier3_cath_ecmo.available ? '✓ FIXED SUITE READY' : 'NONE (REROUTE)'}
               </span>
             </td>
-            <td class="mono">
-              <strong style="color:${h.o2HoursLeft < 15 ? '#DC2626' : '#0F766E'};">${h.o2HoursLeft} hrs</strong>
+
+            <td class="mono" style="min-width:125px;">
+              <div style="padding:8px 10px; border-radius:8px; background:#FAF7F2; border:1px solid #DDD0B8; text-align:center;">
+                <div style="font-size:14px; font-weight:800; color:${h.o2HoursLeft < 15 ? '#DC2626' : '#0F766E'};">${h.o2HoursLeft} hrs</div>
+                <div style="font-size:10px; color:#475569;">LMO Tank Reserve</div>
+              </div>
             </td>
           </tr>
         `;
@@ -1935,13 +2394,13 @@
           <td style="font-weight:700;">${item.resourceName}</td>
           <td>${item.donorName}</td>
           <td>${item.targetName}</td>
-          <td class="mono" style="font-size:11px; color:#0369A1;">${item.transportMode}</td>
+          <td class="mono" style="font-size:11px; color:#0369A1;">🚑 ${item.transportMode}</td>
           <td class="mono" style="font-weight:800; color:#0D9488;">₹${item.leaseRate.toLocaleString('en-IN')}</td>
           <td>
             ${item.status === 'ACTIVE ESCROW'
-              ? `<button onclick="settleEscrowReturn(${idx})" class="step-btn" style="background:#0D9488; color:#FFFFFF; border-color:#0D9488;">Mark Returned &amp; Sterilized</button>`
-              : `<span class="badge badge-teal mono">SETTLED &amp; STERILIZED</span>`
-            }
+          ? `<button onclick="settleEscrowReturn(${idx})" class="step-btn" style="background:#0D9488; color:#FFFFFF; border-color:#0D9488;">Mark Returned &amp; Sterilized</button>`
+          : `<span class="badge badge-teal mono">SETTLED &amp; STERILIZED</span>`
+        }
           </td>
         </tr>
       `).join('');
@@ -1995,15 +2454,15 @@
       }
     }
 
-    function setDeviceViewport() {}
-    function openInstallDeviceModal() {}
+    function setDeviceViewport() { }
+    function openInstallDeviceModal() { }
 
     function selectPresetScenario(scId) {
       const found = PRESET_SCENARIOS.find(s => s.id === scId);
       if (!found) return;
       activeScenario = found;
       evaluateScenario(activeScenario);
-      showToast(`Scenario Active: ${found.title}`, `Locked ${activeDispatches.length} courier sortie(s) in real time.`);
+      showToast(`Scenario Active: ${found.title}`, `Dispatched ${activeDispatches.length} equipment ambulance/courier transfer(s).`);
     }
 
     function selectHospitalOnMap(hospId) {
@@ -2044,7 +2503,7 @@
       activeScenario = {
         id: 'CUSTOM',
         title: `Custom Broadcast -> ${targetHosp.name}`,
-        badge: meta.tier === 'TIER3' ? 'AUTO-REROUTE' : 'CUSTOM CONVERGENCE',
+        badge: meta.tier === 'TIER3' ? 'AUTO-REROUTE' : '108 EQUIP AMB',
         badgeClass: meta.tier === 'TIER3' ? 'badge-amber' : 'badge-teal',
         ambulanceCode: `EMS-108-CUST${Math.floor(10 + Math.random() * 89)}`,
         ambX: Math.max(95, targetHosp.x - 175),
@@ -2052,21 +2511,33 @@
         targetHospId: targetHosp.id,
         ambEtaToTarget: ambEta,
         directAltHospId: targetHosp.id === 'H3' ? 'H4' : 'H3',
-        directAltToAlt: ambEta + 17,
         ambEtaToAlt: ambEta + 17,
         neededResources: [resId],
-        patientSummary: `Custom Broadcast • Requesting ${meta.shortName} at ${targetHosp.name}`
+        patientSummary: `Custom Broadcast • Dispatched ${meta.shortName} via ${meta.transportMode} to ${targetHosp.name}`
       };
 
       evaluateScenario(activeScenario);
-      showToast('Custom Ambulance Broadcast Evaluated', `Dispatched ${meta.shortName} toward ${targetHosp.name}.`);
+      showToast('Custom Broadcast Dispatched', `Dispatched ${meta.shortName} via ${meta.transportMode} toward ${targetHosp.name}.`);
+    }
+
+    function triggerZeroNearbyScenario() {
+      switchTab('command');
+      const s5 = PRESET_SCENARIOS.find(sc => sc.id === 'S5');
+      if (s5) {
+        activeScenario = s5;
+        evaluateScenario(activeScenario);
+        showToast(
+          '10-Min Emergency: Zero Nearby Stock Activated',
+          'Nearby H2 & H3 are depleted! Activated ER Bridge Stabilization at H1 (Min 10) + 2-Ambulance Midpoint Relay from distant H6 (Min 14).'
+        );
+      }
     }
 
     function triggerMassCasualtySurge() {
       switchTab('command');
       activeScenario = PRESET_SCENARIOS[3];
       evaluateScenario(activeScenario);
-      showToast('CODE ORANGE: Mass-Casualty Surge', 'Pooling surplus ventilators and blood from surrounding hospitals into Victoria Trauma Center!');
+      showToast('CODE ORANGE: Mass-Casualty Surge', 'ALS Equipment Ambulances pooling ventilators and blood from surrounding hospitals into Victoria Trauma Center!');
     }
 
     function triggerVoiceRadioDemo() {
@@ -2199,7 +2670,7 @@
       escrowLedger = [];
       activeScenario = PRESET_SCENARIOS[0];
       currentBedSensorState = 'OCCUPIED';
-      transitProgressPct = 30;
+      transitProgressPct = 35;
       evaluateScenario(activeScenario);
       showToast('System Reset', 'All 6 Bengaluru partner hospitals restored to baseline inventory.');
     }
@@ -2280,7 +2751,7 @@
           if (ambTimer && !isTier3Reroute) {
             const m = String(Math.floor(countdownRemainingSec / 60)).padStart(2, '0');
             const s = String(countdownRemainingSec % 60).padStart(2, '0');
-            ambTimer.textContent = `AMB ETA TO ${targetHosp.id}: ${m}:${s}`;
+            ambTimer.textContent = `PATIENT AMB ETA TO ${targetHosp.id}: ${m}:${s}`;
           }
         }
         if (transitPlaying && activeTab === 'command') {
@@ -2296,4 +2767,5 @@
     };
   </script>
 </body>
+
 </html>
